@@ -1,0 +1,324 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('bg5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.3s ease;
+}
+
+.form-active {
+    background: url('bg5.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+#icon {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
+.logo p {
+    margin: 0;
+    /* padding-left: 10px; */
+    font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px;
+    transition: color 0.3s ease;
+}
+
+.navbar a.active {
+    color: #ffee10;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: #ffee10;
+}
+
+.create {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Section Styles */
+.section {
+    height: 100vh;
+    width: 100%;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.section.hidden {
+    display: none;
+}
+
+/* Form Section Styles */
+.form-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.forgot-password a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.forgot-password a:hover {
+    color: #ffee10;
+    font-size: 15.5px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.1); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Blurs background behind the form */
+    color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; /* Ensure correct positioning of the exit button */
+}
+
+.form-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.form-container h2:hover {
+    transform: scale(1.05);
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 15px;
+    outline: none;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.input-box input::placeholder {
+    color: #ddd;
+}
+
+.input-box input:hover,
+.input-box input:focus {
+    background-color: rgba(255, 255, 255, 0.005);
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    bottom: 7px;
+}
+
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.05s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.exit-button:hover {
+    color: rgba(255, 190, 0, 0.9);
+    transform: scale(1.15);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.btn:hover {
+    background-color: rgba(255, 155, 0, 0.7);
+    box-shadow: 0 0 5px 0.5px rgba(45, 45, 45, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Browser Icons Styles */
+.browser-icons {
+    margin-top: 10px; /* Add space above the icons */
+    margin-bottom: 50px;
+    text-align: center; /* Center align the icons */
+}
+
+.browser-icons ul {
+    margin: 0;
+    padding: 5;
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.browser-icons ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.browser-icons ul li a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.65;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.browser-icons ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: scale(1.25);
+    z-index: -1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.browser-icons ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffef1073;
+}
+
+.browser-icons ul li a:hover {
+    color: #ffee10;
+    /*box-shadow: 0 0 5px #ffee10;*/
+    text-shadow: 0 0 5px #ffee10;
+    transform: scale(1.3);
+}
+
+/* Switch Form Styles */
+.switch-form {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff; /* Ensure text is readable */
+}
+
+.switch-form a {
+    color: rgba(255, 190, 0, 0.9);
+    text-decoration: underline;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+    color: #ffee10; /* Ensure consistent hover color */
+}

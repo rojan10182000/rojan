@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ROJAN</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <p><img src="favicon-32x32.png" alt="logo" id="icon"> Rojan</p>
+        </a>
+        <nav class="navbar">
+            <a href="#home" class="nav-link" data-section="home"><i class='bx bx-home-alt-2'></i> Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+            <a href="#services" class="nav-link" data-section="services">Services</a>
+            <a href="#contactMe" class="nav-link" data-section="contactMe">Contact Me</a>
+        </nav>
+        <a href="#" id="showLogin" class="create">Login</a>
+    </header>
+
+    <!-- Content Sections -->
+    <div id="mainContent">
+        <section id="home" class="section">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your one-stop solution for all your web development needs.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Rojan. A passionate web developer with experience in creating responsive and user-friendly websites.</p>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="item">Project 1</div>
+                <div class="item">Project 2</div>
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Services</h2>
+            <p>Here are some services I offer:</p>
+            <!-- List of services -->
+        </section>
+
+        <section id="contactMe" class="section">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <!-- Contact form or information -->
+        </section>
+    </div>
+
+    <!-- Login Section -->
+    <section id="login" class="form-section">
+        <div class="form-container">
+            <button class="exit-button" id="exitLogin">×</button>
+            <form class="login-form">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <label for="login-email"></label>
+                    <input type="email" id="login-email" name="login-email" placeholder="Email" required>
+                </div>
+            
+                <div class="input-box">
+                    <label for="login-password"></label>
+                    <input type="password" id="login-password" name="login-password" placeholder="Password" required>
+                    <i class='bx bx-show-alt toggle-password' id="toggleLoginPassword"></i>
+                </div>
+                <div class="forgot-password">
+                    <a href="">Forgot password?</a>
+                </div>
+            
+                <button type="submit" class="btn">Login</button>
+
+                <div>
+                    <br>
+                    <p>Or log in with</p>
+                </div>
+            
+                <!-- Browser Icons -->
+                <div class="browser-icons">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-google'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <p class="switch-form">No account yet? <a href="#" id="showSignUpFromLogin">Sign Up</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signUp" class="form-section">
+        <div class="form-container">
+            <button class="exit-button" id="exitSignUp">×</button>
+            <form class="signup-form">
+                <h2>Create an Account</h2>
+                <div class="input-box">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+            
+                <div class="input-box">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+            
+                <div class="input-box">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <i class='bx bx-show-alt toggle-password' id="toggleSignUpPassword"></i>
+                </div>
+            
+                <button type="submit" class="btn">Sign Up</button>
+            
+                <div>
+                    <br>
+                    <p>Or sign up using</p>
+                </div>
+
+                <!-- Browser Icons -->
+                <div class="browser-icons">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-google'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <p class="switch-form">Already have an account? <a href="#" id="showLoginFromSignUp">Login</a></p>
+            </form>
+            
+        </div>
+    </section>
+
+    <script src="home.js" defer></script>
+</body>
+</html>
